@@ -3,11 +3,31 @@ import Head from 'next/head';
 import { FaGithub, FaEnvelope, FaGraduationCap, FaFileAlt } from 'react-icons/fa';
 import Image from "next/image";
 import { useState } from 'react';
-import { Outfit } from 'next/font/google';
 import localFont from 'next/font/local'
 
-const outfit = Outfit({ 
-  subsets: ['latin'],
+const outfit = localFont({ 
+  src: [
+    {
+      path: '../public/fonts/Outfit-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Outfit-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Outfit-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Outfit-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    }
+  ],
   display: 'swap',
 });
 
