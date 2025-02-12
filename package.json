@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
-    "deploy": "next build && touch out/.nojekyll && gh-pages -d out"
+    "deploy": "next build && next export && touch out/.nojekyll && gh-pages -d out"
   },
   "homepage": "https:/llong-cs.github.io/llongme",
   "dependencies": {

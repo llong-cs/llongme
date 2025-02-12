@@ -4,7 +4,7 @@ import { FaGithub, FaEnvelope, FaGraduationCap, FaFileAlt } from 'react-icons/fa
 import Image from "next/image";
 import { useState } from 'react';
 import localFont from 'next/font/local'
-import { getAssetPath } from '@/utils/path';
+// import { getAssetPath } from '@/utils/path';
 
 const outfit = localFont({ 
   src: [
@@ -206,21 +206,21 @@ export default function Home() {
 
   const experiences: Experience[] = [
     {
-      logo: getAssetPath("/images/bytedance-logo.png"),
+      logo: "/images/bytedance-logo.png",
       organization: "ByteDance Research",
       role: "Research intern at AI-Lab. Working on multimodal agent.",
       advisors: "Yuan Lin, Hang Li",
       period: "2024-Present"
     },
     {
-      logo: getAssetPath("/images/zju-logo.png"),
+      logo: "/images/zju-logo.png",
       organization: "Zhejiang University",
       role: "M.S. in Computer Science, College of Computer Science and Technology.",
       advisors: "Junbo \"Jake\" Zhao, Haobo Wang",
       period: "2024-Present"
     },
     {
-      logo: getAssetPath("/images/zju-logo.png"),
+      logo: "/images/zju-logo.png",
       organization: "Zhejiang University",
       role: "B.E. in Software Engineering, College of Computer Science and Technology.",
       advisors: "Junbo \"Jake\" Zhao, Haobo Wang",
@@ -288,7 +288,7 @@ export default function Home() {
         <div id="about" className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10">
           <div className="relative w-48 md:w-1/4 aspect-square md:aspect-auto md:h-full overflow-hidden rounded-xl flex-shrink-0">
             <Image
-              src={getAssetPath("/images/avatar.jpg")}
+              src="/images/avatar.jpg"
               alt="Lin Long"
               width={400}
               height={400}
@@ -300,7 +300,7 @@ export default function Home() {
             <h1 className="text-4xl font-bold">Lin Long (<span className="inline-block"></span> <span className={`${calli.className} tracking-wider`}>龍麟</span>)</h1>
             <p className="text-gray-600 italic">"Long" = "Dragon🐉" in Chinese</p>
             <div className="flex justify-center md:justify-start space-x-4 mt-4 text-gray-700">
-              <a href={getAssetPath("/files/CV.pdf")} target="_blank" className="flex items-center space-x-2 hover:text-gray-500"><FaFileAlt /> <span>CV</span></a>
+              <a href="/files/CV.pdf" target="_blank" className="flex items-center space-x-2 hover:text-gray-500"><FaFileAlt /> <span>CV</span></a>
               <a href="https://github.com/llong-cs" className="flex items-center space-x-2 hover:text-gray-500"><FaGithub /> <span>Github</span></a>
               <a href="https://scholar.google.com/citations?user=GdtXxoAAAAAJ" className="flex items-center space-x-2 hover:text-gray-500"><FaGraduationCap /> <span>G-Scholar</span></a>
               <p className="flex items-center space-x-2"><FaEnvelope /> <span className="font-mono">kylin0long AT gmail DOT com</span></p>
